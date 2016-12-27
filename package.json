@@ -12,7 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^1.4.13",
-    "sequelize": "^3.28.0"
+    "mysql": "^2.12.0",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.28.0",
+    "sequelize-auto": "^0.4.18",
+    "sqlite": "^2.2.4",
+    "tedious": "^1.14.0"
   },
   "devDependencies": {
     "mocha": "^3.2.0"
