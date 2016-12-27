@@ -1,0 +1,20 @@
+{
+  "name": "sequelize-auto-gui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "test": "mocha test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.4.13",
+    "sequelize": "^3.28.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
