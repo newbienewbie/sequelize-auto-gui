@@ -1,12 +1,23 @@
 // start.js
-const electron=require('electron');
+
 const path=require('path');
-const app=electron.app;
+const {app,BrowserWindow,ipcMain}=require('electron');
+const generate=require('./lib/main/generate');
+
+ipcMain.on('generate-models',function(event,arg){
+    generate(arg.database,arg.user,arg.pass,arg.opts)
+        .then((info)=>{
+            event.sender.send('models-generated',info);
+        })
+        .catch(err=>{
+            console.log(err);
+        });
+});
 
 const INDEX_HTML_PATH=path.join(__dirname,"dist","views","index.html");
 let win;
 app.on('ready',function(){
-    win=new electron.BrowserWindow();
+    win=new BrowserWindow();
     win.loadURL(`file://${INDEX_HTML_PATH}`);
     win.on('closed',()=>{
         win=null;
