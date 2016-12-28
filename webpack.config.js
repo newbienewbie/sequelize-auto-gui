@@ -6,6 +6,7 @@ const PATH={
 };
 
 module.exports={
+    target:'electron-renderer', // for electron renderer process
     entry:{
         index:path.join(PATH.main,"index.js"),
     },
