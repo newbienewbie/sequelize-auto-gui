@@ -1,18 +1,8 @@
 // start.js
-
 const path=require('path');
-const {app,BrowserWindow,ipcMain}=require('electron');
-const generate=require('./lib/main/generate');
-
-ipcMain.on('generate-models',function(event,arg){
-    generate(arg.database,arg.user,arg.pass,arg.opts)
-        .then((info)=>{
-            event.sender.send('models-generated',info);
-        })
-        .catch(err=>{
-            console.log(err);
-        });
-});
+const {app,BrowserWindow}=require('electron');
+// 注册ipcMain的各个事件监听器
+require('./lib/main/regisiter-listener');
 
 const INDEX_HTML_PATH=path.join(__dirname,"dist","views","index.html");
 let win;
