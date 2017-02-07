@@ -1,6 +1,6 @@
 # Sequelize-auto-gui
 
-[Sequelize-Auto](https://github.com/sequelize/sequelize-auto) GUI
+[Sequelize-Auto](https://github.com/sequelize/sequelize-auto) GUI tool
 
 ## install
 
@@ -20,4 +20,4 @@
 
 ## screenshot
 
-![screenshot](https://github.com/newbienewbie/sequelize-auto-gui/raw/master/screenshot.png)
+![screenshot](https://github.com/newbienewbie/sequelize-auto-gui/raw/master/screenshot.jpg)
